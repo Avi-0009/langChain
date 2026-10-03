@@ -1,7 +1,3 @@
-.venv/
-.vscode
-.env
-
 # Virtual environment
 .venv/
 venv/
@@ -11,6 +7,8 @@ ENV/
 # Python cache
 __pycache__/
 *.py[cod]
+*.pyc
+*.pyo
 
 # Environment variables / secrets
 .env
@@ -30,3 +28,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Chroma / local vector databases
+**/Chroma_DB/

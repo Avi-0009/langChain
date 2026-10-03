@@ -176,7 +176,8 @@ More technologies will be added as I progress through the learning journey.
 * [x] Runnable Branch
 * [x] Runnable Lambda
 * [x] Embedding Models
-* [ ] Vector Databases
+* [x] Vector Databases
+* [x] Chroma
 * [ ] Retrieval
 * [ ] RAG
 * [ ] Agents
@@ -190,15 +191,21 @@ More technologies will be added as I progress through the learning journey.
 ## 🗂️ Repository Structure
 
 ```text
-langChain/
+LangChain/
 │
-├── LLMs/
 ├── ChatModels/
 ├── EmbeddingModels/
-├── LangChain_prompts/
-├── LangChain_Output_Parser/
 ├── LangChain_Chains/
+├── LangChain_Output_Parser/
+├── LangChain_Prompts/
+├── LangChain_VectorDatabase/
+│   ├── Chroma_DB/        # Local database, ignored by Git
+│   └── langChainChroma.py
 │
+├── LLMs/
+│
+├── .env
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
