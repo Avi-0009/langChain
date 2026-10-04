@@ -10,18 +10,19 @@ I'm learning LangChain from the fundamentals and gradually moving toward buildin
 
 I'm using this repository to document what I learn about:
 
-* Large Language Models (LLMs)
-* Chat Models
-* Prompt Engineering
-* Output Parsers
-* Chains
-* Runnables
-* Embeddings
-* Vector Databases
-* RAG (Retrieval-Augmented Generation)
-* Agents
-* Tool Calling
-* AI Application Development
+- Large Language Models (LLMs)
+- Chat Models
+- Prompt Engineering
+- Output Parsers
+- Chains
+- Runnables
+- Embeddings
+- Vector Databases
+- Retrievers
+- RAG (Retrieval-Augmented Generation)
+- Agents
+- Tool Calling
+- AI Application Development
 
 ---
 
@@ -33,13 +34,14 @@ Learning the fundamentals of interacting with language models through LangChain.
 
 Currently exploring:
 
-* `HuggingFaceEndpoint`
-* Hugging Face models
-* OpenAI models
-* `ChatOpenAI`
-* `ChatHuggingFace`
-* Model invocation with `.invoke()`
-* Understanding model input and output
+- `HuggingFaceEndpoint`
+- Hugging Face models
+- OpenAI models
+- `ChatOpenAI`
+- `ChatHuggingFace`
+- Model invocation with `.invoke()`
+- Understanding model input and output
+- Conversational LLM usage
 
 📁 [`LLMs/`](./LLMs)
 
@@ -51,12 +53,14 @@ Understanding how chat-based models work with structured messages.
 
 Learning:
 
-* `SystemMessage`
-* `HumanMessage`
-* `AIMessage`
-* Chat history
-* Message formatting
-* Multi-turn conversations
+- `SystemMessage`
+- `HumanMessage`
+- `AIMessage`
+- Chat history
+- Message formatting
+- Multi-turn conversations
+- OpenAI chat models
+- Hugging Face chat models
 
 📁 [`ChatModels/`](./ChatModels)
 
@@ -68,13 +72,13 @@ Learning how to create reusable and dynamic prompts.
 
 Learning:
 
-* `PromptTemplate`
-* Input variables
-* Partial variables
-* Prompt composition
-* Prompt design
+- `PromptTemplate`
+- Input variables
+- Partial variables
+- Prompt composition
+- Prompt design
 
-📁 [`LangChain_prompts/`](./LangChain_prompts)
+📁 [`LangChain_Prompts/`](./LangChain_Prompts)
 
 ---
 
@@ -84,11 +88,11 @@ Learning how to convert raw LLM responses into useful structured data.
 
 Exploring:
 
-* `StrOutputParser`
-* `PydanticOutputParser`
-* `Pydantic` models
-* Structured output
-* Response schemas
+- `StrOutputParser`
+- `PydanticOutputParser`
+- `Pydantic` models
+- Structured output
+- Response schemas
 
 📁 [`LangChain_Output_Parser/`](./LangChain_Output_Parser)
 
@@ -100,14 +104,14 @@ Learning how LangChain components can be connected together to create pipelines.
 
 Currently exploring:
 
-* LCEL
-* Pipe operator (`|`)
-* `RunnableParallel`
-* `RunnableBranch`
-* `RunnableLambda`
-* Sequential chains
-* Conditional execution
-* Passing data between components
+- LCEL
+- Pipe operator (`|`)
+- `RunnableParallel`
+- `RunnableBranch`
+- `RunnableLambda`
+- Sequential chains
+- Conditional execution
+- Passing data between components
 
 📁 [`LangChain_Chains/`](./LangChain_Chains)
 
@@ -119,14 +123,56 @@ Understanding how text can be converted into numerical representations and how t
 
 Learning:
 
-* Embeddings
-* Semantic similarity
-* Vector representations
-* Vector stores
+- Embeddings
+- Semantic similarity
+- Vector representations
+- Embedding models
+- Sentence Transformers
+- Vector stores
 
 📁 [`EmbeddingModels/`](./EmbeddingModels)
 
 ---
+
+### 7. Vector Databases
+
+Learning how embeddings can be stored and searched using vector databases.
+
+Currently explored:
+
+- Chroma
+- FAISS
+- Local persistent Chroma databases
+- Document storage
+- Metadata
+- Stable document IDs
+- Similarity search
+- Metadata filtering
+- Updating documents
+- Vector store operations
+
+📁 [`LangChain_VectorDatabase/`](./LangChain_VectorDatabase)
+
+The Chroma examples use a local persistent database that is intentionally excluded from Git using `.gitignore`.
+
+---
+
+### 8. Retrievers
+
+Learning how LangChain retrieves relevant documents from a vector store based on a query.
+
+Currently exploring:
+
+- Similarity Retriever
+- MMR Retriever
+- Multi-Query Retriever
+- Contextual Compression Retriever
+- Document retrieval
+- Query transformation
+- Retrieval optimization
+- LLM-based document compression
+
+📁 [`LangChain_Retrievers/`](./LangChain_Retrievers)
 
 ## 🧠 Learning Approach
 
@@ -150,12 +196,17 @@ This repository is intentionally **incremental**. Some examples are small becaus
 
 ## 🛠️ Tech Stack
 
-* Python
-* LangChain
-* OpenAI API
-* Hugging Face
-* Pydantic
-* Python-dotenv
+- Python
+- LangChain
+- LangChain classic
+- LangChain Community
+- OpenAI API
+- Hugging Face
+- Chroma
+- FAISS
+- Pydantic
+- Python-dotenv
+- SQLite (used internally by local Chroma persistence)
 
 More technologies will be added as I progress through the learning journey.
 
@@ -178,7 +229,7 @@ More technologies will be added as I progress through the learning journey.
 * [x] Embedding Models
 * [x] Vector Databases
 * [x] Chroma
-* [ ] Retrieval
+* [x] Retrieval
 * [ ] RAG
 * [ ] Agents
 * [ ] Tool Calling
@@ -198,13 +249,14 @@ LangChain/
 ├── LangChain_Chains/
 ├── LangChain_Output_Parser/
 ├── LangChain_Prompts/
+├── LangChain_Retrievers/
 ├── LangChain_VectorDatabase/
 │   ├── Chroma_DB/        # Local database, ignored by Git
 │   └── langChainChroma.py
 │
 ├── LLMs/
 │
-├── .env
+├── .env                 # Ignored by Git
 ├── .gitignore
 ├── requirements.txt
 └── README.md
