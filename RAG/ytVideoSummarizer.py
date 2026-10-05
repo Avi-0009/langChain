@@ -50,7 +50,7 @@ except Exception as e:
 
 splitter = RecursiveCharacterTextSplitter(
     chunk_size = 500, 
-    chunk_overlap = 100
+    chunk_overlap = 200
 )
 chunks = splitter.create_documents([transcript_text])
 
@@ -79,8 +79,7 @@ llm = ChatOpenAI(
 # Prompt
 prompt = PromptTemplate(
     template="""
-You are a helpful assistant answering questions about a YouTube video.
-
+You are a helpful assistant.
 Answer ONLY from the provided transcript context.
 
 If the context is insufficient, say:
