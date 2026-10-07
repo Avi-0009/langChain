@@ -212,6 +212,44 @@ More technologies will be added as I progress through the learning journey.
 
 ---
 
+### 9. Tools & Agents
+
+Learning how LLMs can interact with external systems and APIs through tools.
+
+Currently exploring:
+
+- Custom LangChain tools using `@tool`
+- Vercel API integration
+- GitHub API integration
+- Weather API integration
+- Web search
+- Tool selection by the LLM
+- Agent-based tool execution
+- Multi-turn conversations with tools
+- `create_agent`
+- Hugging Face + Gemma 4 for tool calling
+
+📁 [`LangChain_Tools/`](./LangChain_Tools)
+
+Current tool architecture:
+
+```text
+User
+  ↓
+Gemma 4
+  ↓
+Agent
+  ├── Vercel API
+  ├── GitHub API
+  ├── Weather API
+  └── Web Search
+  ↓
+Tool Result
+  ↓
+Gemma 4
+  ↓
+Final Response
+
 ## 📈 Progress
 
 * [x] LLM basics
@@ -229,10 +267,17 @@ More technologies will be added as I progress through the learning journey.
 * [x] Embedding Models
 * [x] Vector Databases
 * [x] Chroma
+* [x] FAISS
 * [x] Retrieval
-* [ ] RAG
-* [ ] Agents
-* [ ] Tool Calling
+* [x] Similarity Retriever
+* [x] MMR Retriever
+* [x] Multi-Query Retriever
+* [x] Contextual Compression Retriever
+* [x] RAG basics
+* [x] Tool Calling
+* [x] API Tools
+* [x] Web Search
+* [ ] Advanced Agents
 * [ ] Memory
 * [ ] Evaluation
 * [ ] Production AI Applications
@@ -250,6 +295,14 @@ LangChain/
 ├── LangChain_Output_Parser/
 ├── LangChain_Prompts/
 ├── LangChain_Retrievers/
+├── LangChain_Tools/
+│   ├── LangChain_Tools/
+│   │   ├── github_tool.py
+│   │   ├── vercel_tool.py
+│   │   ├── weather_tool.py
+│   │   └── web_search_tool.py
+│   └── main.py
+│
 ├── LangChain_VectorDatabase/
 │   ├── Chroma_DB/        # Local database, ignored by Git
 │   └── langChainChroma.py
