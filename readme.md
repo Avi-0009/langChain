@@ -249,6 +249,7 @@ Tool Result
 Gemma 4
   ↓
 Final Response
+```
 
 ## 📈 Progress
 
